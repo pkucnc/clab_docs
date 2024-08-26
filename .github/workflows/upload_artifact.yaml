@@ -1,0 +1,42 @@
+name: Upload Docs to JFrog
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build with VitePress
+        run: pnpm docs:build
+      - name: Create Tarball
+        uses: a7ul/tar-action@v1.1.0
+        with:
+          command: c
+          cwd: ${{ github.workspace }}/.vitepress/
+          files: |
+            ./dist
+          outPath: ${{ github.workspace }}/.vitepress/clab-docs.tar.gz
+      - name: Upload Tarball
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://jfrog.lcpu.dev/artifactory/cloud-doc/latest.tar.gz'
+          method: 'PUT'
+          bearerToken: ${{ secrets.JFROG_BEARER_TOKEN }}
+          file: ${{ github.workspace }}/.vitepress/clab-docs.tar.gz
