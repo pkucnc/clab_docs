@@ -59,7 +59,7 @@ export default defineConfig({
       }
     },
     editLink: {
-      pattern: 'https://github.com/lcpu-club/clab-docs/edit/main/:path',
+      pattern: 'https://github.com/lcpu-club/clab_docs/edit/main/:path',
       text: '在GitHub上更新本页'
     },
     darkModeSwitchLabel: "颜色选择",
