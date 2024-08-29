@@ -8,6 +8,7 @@ export default defineConfig({
   lastUpdated: true,
   base: '/docs',
   cleanUrls: true,
+  srcExclude: [ 'README.md' ],
   themeConfig: {
     i18nRouting: false,
     logo: "/logo.svg",
