@@ -34,7 +34,9 @@ export default defineConfig({
               { text: "Volume快照和备份", link: '/storage/volume-snapshots-and-backups'},
               ] 
             },
-            { text: '镜像站使用指南', link: '/getting-started/lcpu-mirror' }
+            { text: '镜像站使用指南', link: '/getting-started/lcpu-mirror' },
+            { text: 'FAQ', link: '/faq' },
+            { text: '贡献者与致谢', link: '/contributors' }
           ]
         }
       ],
@@ -44,7 +46,7 @@ export default defineConfig({
     ],
     footer: {
       message: '由北京大学学生 Linux 俱乐部开发并维护',
-      copyright: '© 2024 LCPU Club'
+      copyright: '© 2024 LCPU Club, licensed under CC BY-SA 4.0'
     },
     docFooter: {
       prev: '上一节',
