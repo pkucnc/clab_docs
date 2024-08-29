@@ -33,6 +33,7 @@ export default defineConfig({
             { text: '储存', items: [
               { text: "Volume类型", link: '/storage/volume-type'},
               { text: "Volume快照和备份", link: '/storage/volume-snapshots-and-backups'},
+              { text: "高级功能", link: '/storage/advanced'}
               ] 
             },
             { text: '镜像站使用指南', link: '/getting-started/lcpu-mirror' },
