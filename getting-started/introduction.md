@@ -62,7 +62,7 @@ CPU 核数和内存大小是用来区分不同规格的云主机的，每位同�
 
 ## 选择硬盘类型和大小
 
-CLab 提供两种硬盘类型，分别是 SSD 和 HDD。SSD 是固态硬盘阵列，适合对随机访问速度要求高的场景，也适合作为系统盘。HDD 是机械硬盘阵列，适合对顺序访问速度要求高的场景，适合作为数据盘。我们一般选择 SSD 类型的硬盘作为系统盘，如果需要大容量的数据盘，增加一块 HDD 类型的硬盘。
+CLab 提供两种硬盘类型，分别是 SSD 和 HDD。SSD 是固态硬盘阵列，适合对随机访问速度要求高的场景，也适合作为系统盘，但是因为容量较小，每位用户的配额较小。HDD 是机械硬盘阵列，适合对顺序访问速度要求高的场景，适合作为数据盘。我们一般选择 SSD 类型的硬盘作为系统盘，如果需要大容量的数据盘，增加一块 HDD 类型的硬盘。
 
 硬盘大小是指云主机的硬盘大小，可以根据自己的需求选择。一般情况下，使用默认最小值就够了。
 
@@ -122,6 +122,43 @@ ssh -i ~/.ssh/cloud_key 用户名@<内网IP>
 
 ![](/assets/getting-started/ssh-hostkey.png)
 
+# 登陆网关
+
+如果需要连接校园网，需要和正常设备一样登陆网关。云主机通常不方便使用网页版网关，可以使用如下网关登陆程序：
+
+```python
+import requests
+import getpass
+
+# 从命令行获取用户名和密码
+username = input("请输入用户名: ")
+password = getpass.getpass("请输入密码: ")
+
+url = "https://its4.pku.edu.cn/cas/ITSClient"
+payload = {
+    'username': username,
+    'password': password,
+    'iprange': 'free',
+    'cmd': 'open'
+}
+headers = {'Content-type': 'application/x-www-form-urlencoded'}
+
+result = requests.post(url, params=payload, headers=headers)
+print(result.text)
+```
+
+将程序保存为`login.py`，运行程序，根据提示输入用户名和密码，就可以登陆网关了。程序会返回网关的登陆结果。** 注意，密码不会显示在终端上，这是为了保护密码的安全，直接输入即可。**
+
+```bash
+python3 login.py
+```
+
+部分发行版需要安装 Python3 才可以运行这个程序，命令如下：
+
+```bash
+sudo apt install python3 # Ubuntu, Debian
+sudo dnf install python3 # Fedora, CentOS, Rocky Linux
+```
 # 总结
 
 本文介绍了如何创建和连接云主机。创建云主机时，需要选择规格、镜像、硬盘类型和大小、网络、安全组、名称和密钥等信息。连接云主机时，需要使用 SSH 客户端，输入云主机的内网 IP 地址和用户名，就可以连接到云主机了。希望大家能够顺利创建和连接云主机，体验云平台的便利和强大功能。
