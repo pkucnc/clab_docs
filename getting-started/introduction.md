@@ -127,6 +127,8 @@ ssh -i ~/.ssh/cloud_key 用户名@<内网IP>
 如果需要连接校园网，需要和正常设备一样登陆网关。云主机通常不方便使用网页版网关，可以使用如下网关登陆程序：
 
 ```python
+#!/usr/bin/env python3
+
 import requests
 import getpass
 
