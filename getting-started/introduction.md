@@ -147,7 +147,8 @@ result = requests.post(url, params=payload, headers=headers)
 print(result.text)
 ```
 
-将程序保存为`login.py`，运行程序，根据提示输入用户名和密码，就可以登陆网关了。程序会返回网关的登陆结果。** 注意，密码不会显示在终端上，这是为了保护密码的安全，直接输入即可。**
+将程序保存为`login.py`，运行程序，根据提示输入用户名和密码，就可以登陆网关了。程序会返回网关的登陆结果。注意，密码不会显示在终端上，这是为了保护密码的安全，直接输入即可。
+
 
 ```bash
 python3 login.py
@@ -159,6 +160,9 @@ python3 login.py
 sudo apt install python3 # Ubuntu, Debian
 sudo dnf install python3 # Fedora, CentOS, Rocky Linux
 ```
+
+未联网前可访问北京大学镜像站 mirrors.pku.edu.cn 获取软件源，请参考[网络：北京大学镜像站](/getting-started/lcpu-mirror)。
+
 # 总结
 
 本文介绍了如何创建和连接云主机。创建云主机时，需要选择规格、镜像、硬盘类型和大小、网络、安全组、名称和密钥等信息。连接云主机时，需要使用 SSH 客户端，输入云主机的内网 IP 地址和用户名，就可以连接到云主机了。希望大家能够顺利创建和连接云主机，体验云平台的便利和强大功能。
