@@ -18,6 +18,7 @@ title: 贡献者与致谢
 - [薛昊男](https://github.com/xuehaonan27)
 - [李博海](https://github.com/000lbh)
 - [王卓峰](https://github.com/wzf03)
+- 邢岱雯：文案与美工设计
 
 ## 测试组
 
