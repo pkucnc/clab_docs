@@ -60,4 +60,4 @@ sudo sed -i 's@http://security.debian.org@https://mirrors.pku.edu.cn@g' /etc/apt
 
 ```
 Server = https://mirrors.pku.edu.cn/archlinux/$repo/os/$arch
-``
+```
