@@ -10,18 +10,24 @@ title: 快速上手
 
 为了连接到云主机，我们需要一个 SSH 客户端。在 Windows 系统中，我们推荐安装 [Windows Terminal](https://aka.ms/terminal)。在 macOS 和 Linux 系统中，我们推荐使用系统自带的终端。
 
-然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成。该操作将在 `~/.ssh` 目录下生成一个名为 `cloud_key` 的密钥对。请将 `cloud_key.pub` 中的内容添加到云平台的 SSH 密钥管理中。
+然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成。下列操作将在 用户目录下`.ssh`文件夹下生成一个名为 `cloud_key` 的密钥对。请将 `cloud_key.pub` 中的内容添加到云平台的 SSH 密钥管理中。
 
-在 Windows 上，打开终端执行：
+## Windows 
+
+打开终端执行如下命令：
 ```bash
 ssh-keygen -t ed25519 -f $env:USERPROFILE/.ssh/cloud_key -C "Key for PKU CLab"
 ```
-如果上述命令报错，说明你使用的是`cmd`命令行工具，则执行如下命令。不过我们推荐安装和使用`powershell`，功能更丰富，可参考[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)。
+
+如果上述命令可以执行，但选择密码后报错“No such file or directory”，说明你使用的是`cmd`命令行工具，则执行如下命令。不过我们推荐安装和使用`powershell`，功能更丰富，可参考[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)。
 ```bash
 ssh-keygen -t ed25519 -f %userprofile%/.ssh/cloud_key -C "Key for PKU CLab"
 ```
 
-在 macOS 和 Linux 上，打开终端执行：
+如果报错为找不到`ssh-keygen`命令，说明你的 Windows 系统版本较老，推荐更新至近期的 Windows 版本或者下载学生免费版[Xshell](https://www.netsarang.com/en/free-for-home-school/)使用。
+
+## macOS 和 Linux 
+打开终端执行如下命令：
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/cloud_key -C "Key for PKU CLab"
 ```
