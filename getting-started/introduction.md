@@ -10,7 +10,7 @@ title: 快速上手
 
 为了连接到云主机，我们需要一个 SSH 客户端。在 Windows 系统中，我们推荐安装 [Windows Terminal](https://aka.ms/terminal)。在 macOS 和 Linux 系统中，我们推荐使用系统自带的终端。
 
-然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成：
+然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成。该操作将在 `~/.ssh` 目录下生成一个名为 `cloud_key` 的密钥对。请将 `cloud_key.pub` 中的内容添加到云平台的 SSH 密钥管理中。
 
 在 Windows 上，打开终端执行：
 ```bash
@@ -25,8 +25,6 @@ ssh-keygen -t ed25519 -f %userprofile%/.ssh/cloud_key -C "Key for PKU CLab"
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/cloud_key -C "Key for PKU CLab"
 ```
-
-这将在 `~/.ssh` 目录下生成一个名为 `cloud_key` 的密钥对。请将 `cloud_key.pub` 中的内容添加到云平台的 SSH 密钥管理中。
 
 # 登陆平台
 
