@@ -12,6 +12,16 @@ title: 快速上手
 
 然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成：
 
+在 Windows 上，打开终端执行：
+```bash
+ssh-keygen -t ed25519 -f $env:USERPROFILE/.ssh/cloud_key -C "Key for PKU CLab"
+```
+如果上述命令报错，说明你使用的是`cmd`命令行工具，则执行如下命令。不过我们推荐安装和使用`powershell`，功能更丰富，可参考[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)。
+```bash
+ssh-keygen -t ed25519 -f %userprofile%/.ssh/cloud_key -C "Key for PKU CLab"
+```
+
+在 macOS 和 Linux 上，打开终端执行：
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/cloud_key -C "Key for PKU CLab"
 ```
