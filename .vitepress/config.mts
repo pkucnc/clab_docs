@@ -24,6 +24,10 @@ export default defineConfig({
           text: '文档',
           items: [
             { text: '快速开始', link: '/getting-started/introduction' },
+            { text: '课程专区', items: [
+              { text: "ICS", link: '/course/ics'}
+              ] 
+            },
             { text: '网络', items: [
               { text: "自组网", link: '/networking/private-network'},
               { text: "Router和浮动IP", link: '/networking/router-and-floating-ip'},
