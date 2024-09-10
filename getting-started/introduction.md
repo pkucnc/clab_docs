@@ -8,9 +8,9 @@ title: 快速上手
 
 # 本地客户端准备
 
-为了连接到云主机，我们需要一个 SSH 客户端。在 Windows 系统中，我们推荐安装 [Windows Terminal](https://aka.ms/terminal)。在 macOS 和 Linux 系统中，我们推荐使用系统自带的终端。
+为了连接到云主机，我们需要一个终端和 SSH 客户端。在 Windows 系统中，我们推荐安装 [Windows Terminal](https://aka.ms/terminal) （Windows11应已自带）。在 macOS 和 Linux 系统中，我们推荐使用系统自带的终端。
 
-然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成。如果你之前用密钥登录过其他机器，或者电脑的个人目录中已经有`.ssh/id_rsa.pub`或者`.ssh/id_ed25519.pub`文件，可以直接现有的.pub文件到平台，会较为方便。
+然后，我们需要一个 SSH 密钥对。如果你还没有 SSH 密钥对，可以通过以下方式生成。如果你之前用密钥登录过其他机器，或者电脑的个人目录中已经有`.ssh/id_rsa.pub`或者`.ssh/id_ed25519.pub`文件，可以直接复制现有的.pub文件到平台，会较为方便。
 
 :::tip 小贴士
 我们这里说的用户目录，在 Windows 下指的是 `C:\User\用户名`，macOS 和 Linux 中指的是`/home/用户名`
