@@ -4,7 +4,7 @@ This is the documentation for PKU Clab.
 
 ## Building site
 
-The project is built with [VuePress](https://vitepress.dev), with root directory at `./`
+The project is built with [VitePress](https://vitepress.dev), with root directory at `./`
 
 Run `pnpm install` to install dependencies, `pnpm run docs:build` to build the documentation.
 
