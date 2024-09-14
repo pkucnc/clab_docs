@@ -36,7 +36,7 @@ jobs:
       - name: Upload Tarball
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://jfrog.lcpu.dev/artifactory/cloud-doc/latest.tar.gz'
+          url: 'https://jfrog.lcpu.dev/artifactory/cloud-doc/latest-neo.tar.gz'
           method: 'PUT'
           bearerToken: ${{ secrets.JFROG_BEARER_TOKEN }}
           file: ${{ github.workspace }}/.vitepress/clab-docs.tar.gz

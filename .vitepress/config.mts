@@ -6,7 +6,7 @@ export default defineConfig({
   description: "开箱即用的免费云计算服务，为教学与科研服务。",
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   lastUpdated: true,
-  base: '/docs',
+  base: '/',
   cleanUrls: true,
   srcExclude: [ 'README.md' ],
   themeConfig: {
@@ -15,34 +15,41 @@ export default defineConfig({
     logoLink: '/docs/getting-started/introduction',
     nav: [
       { text: 'PKU Clab', link: 'https://clab.pku.edu.cn', target: '_self'},
-      { text: '文档', link: '/getting-started/introduction', activeMatch: '/' },
-
+      { text: '文档', link: '/docs/getting-started/introduction', activeMatch: '/docs' },
+      { text: '课程专区', link: '/courses', activeMatch: '/courses' },
     ],
     sidebar: {
-      '/': [
+      '/courses': [
+        {
+          text: '课程专区',
+          items: [
+            { text: 'ICS', items: [
+              { text: "快速开始", link: '/courses/ics/getting-started'}
+              ] 
+            }
+          ]
+        }
+      ],
+      '/docs/': [
         {
           text: '文档',
           items: [
-            { text: '快速开始', link: '/getting-started/introduction' },
-            { text: '课程专区', items: [
-              { text: "ICS", link: '/course/ics'}
-              ] 
-            },
+            { text: '快速开始', link: '/docs/getting-started/introduction' },
             { text: '网络', items: [
-              { text: "自组网", link: '/networking/private-network'},
-              { text: "Router和浮动IP", link: '/networking/router-and-floating-ip'},
-              { text: "安全组", link: '/networking/security-group'}
+              { text: "自组网", link: '/docs/networking/private-network'},
+              { text: "Router和浮动IP", link: '/docs/networking/router-and-floating-ip'},
+              { text: "安全组", link: '/docs/networking/security-group'}
               ] 
             },
             { text: '储存', items: [
-              { text: "Volume类型", link: '/storage/volume-type'},
-              { text: "Volume快照和备份", link: '/storage/volume-snapshots-and-backups'},
-              { text: "高级功能", link: '/storage/advanced'}
+              { text: "Volume类型", link: '/docs/storage/volume-type'},
+              { text: "Volume快照和备份", link: '/docs/storage/volume-snapshots-and-backups'},
+              { text: "高级功能", link: '/docs/storage/advanced'}
               ] 
             },
-            { text: '镜像站使用指南', link: '/getting-started/lcpu-mirror' },
-            { text: 'FAQ', link: '/faq' },
-            { text: '贡献者与致谢', link: '/contributors' }
+            { text: '镜像站使用指南', link: '/docs/getting-started/lcpu-mirror' },
+            { text: 'FAQ', link: '/docs/faq' },
+            { text: '贡献者与致谢', link: '/docs/contributors' }
           ]
         }
       ],

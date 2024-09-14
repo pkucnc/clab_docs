@@ -6,7 +6,7 @@ title: ICS 课程实验环境
 
 ICS 课程使用 CLab 作为实验环境。理论上所有 Lab 都需要在使用 CLab 平台完成。不过带有硬性限制的只有`attack lab`, `bomb lab` 和 `proxy lab`。
 
-建议阅读[快速上手](/getting-started/introduction)，以了解云平台的使用。阅读完快速上手后，可以对照以下的建议创建虚拟机。
+建议阅读[快速上手](/docs/getting-started/introduction)，以了解云平台的使用。阅读完快速上手后，可以对照以下的建议创建虚拟机。
 
 # 虚拟机配置
 
