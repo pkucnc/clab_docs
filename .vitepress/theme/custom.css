@@ -1,4 +1,8 @@
 :root {
-    --vp-font-family-base: /* normal text font */
-    --vp-font-family-mono: /* code font */
-  }
+  /*--vp-font-family-base:  normal text font */
+  /*--vp-font-family-mono: code font */
+}
+
+.outline-link.active {
+  color: var(--vp-c-brand-1) !important;
+}
