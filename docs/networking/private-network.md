@@ -32,6 +32,7 @@ title: 创建网络
 -	具体ip：此处填写为192.168.0.10
  
 ![](/assets/networking/create_PC_with_network_1.png)
+
 同时，还需要为主机指定安全组
 ![](/assets/networking/create_PC_with_network_2.png)
  
@@ -39,6 +40,10 @@ title: 创建网络
 在【计算】-【云主机】页面，选中一台主机，通过右上角的【更多】-【关联资源】-【挂载网卡】可以进入网络设置页面
  
 ![](/assets/networking/add_PC_to_network_1.png)
+
 选中网络与子网后，IP设置方法与上文类似：
 ![](/assets/networking/add_PC_to_network_2.png)
  
+## 设置QoS策略
+目前服务器针对没有设置QoS策略的网卡会默认添加10MB/s的限速。如果需要达成全速率，可以在【计算】-【云主机】中点击一台机器，进入【网卡】选项卡，点击【修改QoS】，选中【共享QoS策略】中限制较大的规则即可。
+![](/assets/networking/modify_NIC_QoS.png)
