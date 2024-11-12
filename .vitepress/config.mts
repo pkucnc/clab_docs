@@ -33,12 +33,8 @@ export default defineConfig({
           items: [
             { text: '快速开始', link: '/docs/getting-started/introduction' },
             {
-              text: '网络',
-              items: [
-                { text: '自组网', link: '/docs/networking/private-network' },
-                { text: 'Router和浮动IP', link: '/docs/networking/router-and-floating-ip' },
-                { text: '安全组', link: '/docs/networking/security-group' }
-              ]
+              text: '计算',
+              items: [{ text: '实例操作', link: '/docs/compute/instance-operations' }]
             },
             {
               text: '网络',
