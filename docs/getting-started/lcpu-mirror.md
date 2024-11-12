@@ -58,6 +58,6 @@ sudo sed -i 's@http://security.debian.org@https://mirrors.pku.edu.cn@g' /etc/apt
 
 编辑文件/etc/pacman.d/mirrorlist，在开头插入
 
-```
+```plain
 Server = https://mirrors.pku.edu.cn/archlinux/$repo/os/$arch
 ```
