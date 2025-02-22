@@ -16,17 +16,8 @@ export default defineConfig({
     nav: [
       { text: 'PKU Clab', link: 'https://clab.pku.edu.cn', target: '_self' },
       { text: '文档', link: '/docs/getting-started/introduction', activeMatch: '/docs' },
-      { text: '课程专区', link: '/courses', activeMatch: '/courses' }
     ],
     sidebar: {
-      '/courses': [
-        {
-          text: '课程专区',
-          items: [
-            { text: 'ICS', items: [{ text: '快速开始', link: '/courses/ics/getting-started' }] }
-          ]
-        }
-      ],
       '/docs/': [
         {
           text: '文档',
@@ -50,6 +41,13 @@ export default defineConfig({
                 { text: 'Volume类型', link: '/docs/storage/volume-type' },
                 { text: 'Volume快照和备份', link: '/docs/storage/volume-snapshots-and-backups' },
                 { text: '高级功能', link: '/docs/storage/advanced' }
+              ]
+            },
+            {
+              text: '课程专区',
+              items: [
+                { text: 'ICS', items: [{ text: '计算机系统导论', link: '/courses/ics' }] },
+                { text: 'EDA', items: [{ text: 'CLab for EDA', link: '/courses/eda' }] }
               ]
             },
             { text: '镜像站使用指南', link: '/docs/getting-started/lcpu-mirror' },
