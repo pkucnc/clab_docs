@@ -73,7 +73,7 @@ CLab 交流 QQ 群号为`432191140`，我们会在群内回答您的问题，欢
 
 #### 第一页：
 
-![](/assets/courses/eda/create_vm.png)
+![](/assets/courses/eda/create_vm.jpg)
 
 
 1. 选择规格：使用`elite_computing`分类，类型为`e4`
@@ -197,7 +197,7 @@ sudo systemctl enable --now nfs-server
 
 #### 第一页：
 
-![](/assets/courses/eda/create_vm.png)
+![](/assets/courses/eda/create_vm.jpg)
 
 1. 选择规格：使用`elite_computing`分类，类型为`e4`
 2. 选择操作系统：使用`其他`分类，选择`CLab EDA`
