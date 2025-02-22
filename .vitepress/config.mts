@@ -46,8 +46,8 @@ export default defineConfig({
             {
               text: '课程专区',
               items: [
-                { text: 'ICS', items: [{ text: '计算机系统导论', link: '/courses/ics' }] },
-                { text: 'EDA', items: [{ text: 'CLab for EDA', link: '/courses/eda' }] }
+                { text: '计算机系统导论', link: '/docs/courses/ics' },
+                { text: 'CLab for EDA', link: '/docs/courses/eda' }
               ]
             },
             { text: '镜像站使用指南', link: '/docs/getting-started/lcpu-mirror' },
