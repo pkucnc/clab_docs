@@ -15,7 +15,7 @@ export default defineConfig({
     logoLink: '/docs/getting-started/introduction',
     nav: [
       { text: 'PKU Clab', link: 'https://clab.pku.edu.cn', target: '_self' },
-      { text: '文档', link: '/docs/getting-started/introduction', activeMatch: '/docs' },
+      { text: '文档', link: '/docs/getting-started/introduction', activeMatch: '/docs' }
     ],
     sidebar: {
       '/docs/': [
