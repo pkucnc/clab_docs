@@ -19,9 +19,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+      
+      - name: Install Corepack
+        # See: [actions/setup-node/issues/1222](https://github.com/actions/setup-node/issues/1222)
+        run: |
+          npm i -g --force corepack
+          corepack enable
+        shell: bash
 
       - name: Install dependencies
-        run: corepack pnpm i
+        run: pnpm i
 
       - name: Lint
-        run: corepack pnpm lint
+        run: pnpm lint
