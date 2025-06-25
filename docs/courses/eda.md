@@ -6,7 +6,7 @@
 
 1. 操作系统：`almalinux` 8.10。`almalinux`是`EL`系系统，基于 RHEL 修改得到，具有良好兼容性。其生命周期到 2029 年 5 月。预期于 2025 年秋学期支持`almalinux 9`。
 2. 硬件：支持`x86_64`架构处理器，CPU 大于等于 2 核心，内存大于等于 4GB
-3. 软件：目前支持`Synopsys`、`Cadence`、`Mentor`等软件的`2020`版本。如果您有其他软件需求，请联系我们
+3. 软件：目前支持`Synopsys`、`Cadence`、`Mentor`等软件的`2020`版本。华大九天EDA经测试可以正常运行，但license需要授课组联系CLab对接。如果您有其他软件需求，请联系我们
 4. 远程桌面：支持北京大学长沙计算与数字经济研究院的`shadowdesk`远程桌面软件。该软件可以在浏览器访问远程 Linux 系统，具有剪贴板同步、文件传输等功能，符合 EDA 的需要
 
 ## 目标用户
@@ -140,13 +140,13 @@ sudo systemctl enable --now nfs-server
 
 #### 连接远程桌面
 
-使用`lcpu rd`命令，输入您的学号或者工号，即可使用远程桌面。您可以通过家目录中`rd_password`文件，或者再次输入`lcpu rd`命令，查看远程桌面的密码。
+使用`clabcli remote`命令，输入您的学号或者工号，即可使用远程桌面。您可以通过家目录中`rd_password`文件，或者再次输入`clabcli desktop`命令，查看远程桌面的密码。
 
-访问`https://rd.lcpu.dev`，使用账号密码登录，即可使用远程桌面。
+访问`https://rdv2.lcpu.dev`，使用账号密码登录，即可使用远程桌面。
 
 #### 连接北大网关（可选）
 
-如您需要使用互联网，或者使用 vscode 连接远程主机，您需要连接北大网关。您可以使用`lcpu connect`命令，输入您的学号或者工号，即可连接北大网关。连接成功后，您可以使用`lcpu disconnect`命令断开连接。
+如您需要使用互联网，或者使用 vscode 连接远程主机，您需要连接北大网关。您可以使用`clabcli connect`命令，输入您的学号或者工号，即可连接北大网关。连接成功后，您可以使用`clabcli disconnect`命令断开连接。
 
 ### 提交信息至 CLab 管理团队
 
@@ -190,7 +190,7 @@ sudo systemctl enable --now nfs-server
 5. 选择安全组，使用`default`即可
 6. 点击确定，创建虚拟网卡
 
-### 创建课程管理主机
+### 创建课程主机
 
 在左边栏选中`计算-云主机`，进入云主机列表，点击`创建云主机`
 
@@ -239,10 +239,10 @@ sudo systemctl enable --now lmg
 
 #### 连接远程桌面
 
-使用`lcpu rd`命令，输入您的学号或者工号，即可使用远程桌面。您可以通过家目录中`rd_password`文件，或者再次输入`lcpu rd`命令，查看远程桌面的密码。
+使用`clabcli desktop`命令，输入您的学号或者工号，即可使用远程桌面。您可以通过家目录中`rd_password`文件，或者再次输入`clabcli desktop`命令，查看远程桌面的密码。
 
-访问`https://rd.lcpu.dev`，使用账号密码登录，即可使用远程桌面。
+访问`https://rdv2.lcpu.dev`，使用账号密码登录，即可使用远程桌面。
 
 #### 连接北大网关（可选）
 
-如您需要使用互联网，或者使用 vscode 连接远程主机，您需要连接北大网关。您可以使用`lcpu connect`命令，输入您的学号或者工号，即可连接北大网关。连接成功后，您可以使用`lcpu disconnect`命令断开连接。
+如您需要使用互联网，或者使用 vscode 连接远程主机，您需要连接北大网关。您可以使用`clabcli connect`命令，输入您的学号或者工号，即可连接北大网关。连接成功后，您可以使用`clabcli disconnect`命令断开连接。
