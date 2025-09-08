@@ -46,7 +46,7 @@ export default defineConfig({
             {
               text: '课程专区',
               items: [
-                { text: '计算机系统导论', link: '/docs/courses/ics' },
+                { text: '计算机系统导论（ICS）', link: '/docs/courses/ics' },
                 { text: 'CLab for EDA', link: '/docs/courses/eda' }
               ]
             },
