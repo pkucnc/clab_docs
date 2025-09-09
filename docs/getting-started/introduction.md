@@ -140,18 +140,18 @@ ssh 用户名@内网IP
 
 如果云虚拟机需要连接互联网，需要和正常手机电脑一样登陆网关。特别的，如果需要`vscode`连接到主机，则需要联网才能获得较好体验。
 
-云主机通常不方便使用网页版网关，对于部分镜像（比如 ICS 的课程镜像），我们提供了`lcpu`命令可以连接校园网。使用方法如下。注意，输入密码时，密码是不显示的，输入完成后回车即可。
+云主机通常不方便使用网页版网关，对于部分镜像（比如 ICS 的课程镜像），我们提供了`clabcli`命令可以连接校园网。使用方法如下。注意，输入密码时，密码是不显示的，输入完成后回车即可。
 
 连接网关：
 
 ```bash
-lcpu connect
+clabcli connect
 ```
 
 断开网关连接：
 
 ```bash
-lcpu disconnect
+clabcli disconnect
 ```
 
 对于其他镜像，可以使用如下网关登陆程序。
@@ -190,6 +190,25 @@ python3 login.py
 ```bash
 sudo apt install python3 # Ubuntu, Debian
 sudo dnf install python3 # Fedora, CentOS, Rocky Linux
+```
+
+如果您想使用`clabcli`工具，可以用如下命令安装：
+
+Ubuntu/Debian:
+
+```bash
+distribution=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
+curl https://git.pku.edu.cn/api/packages/lcpu/debian/repository.key -o /etc/apt/keyrings/lcpu.asc
+echo "deb [signed-by=/etc/apt/keyrings/lcpu.asc] https://git.pku.edu.cn/api/packages/lcpu/debian $distribution main" | tee -a /etc/apt/sources.list.d/lcpu.list
+apt update
+apt install -y clab-guest-tools
+```
+
+Rocky Linux/CentOS/Fedora:
+
+```bash
+sudo wget -O /etc/yum.repos.d/lcpu.repo https://git.pku.edu.cn/api/packages/lcpu/rpm/el$(rpm -E %{rhel}).repo
+sudo dnf install -y clab-guest-tools
 ```
 
 # 虚拟机文件传输

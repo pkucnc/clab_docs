@@ -36,13 +36,13 @@ ssh ubuntu@10.129.xxx.xx
 云主机与大家校园网的其他设备，比如手机、电脑一样，需要连接网关才能访问互联网。可以使用如下命令连接。注意，输入密码时，密码是不显示的，输入完成后回车即可。
 
 ```bash
-lcpu connect
+clabcli connect
 ```
 
 如果需要断开云主机的网关，释放校园网连接数，可以运行：
 
 ```bash
-lcpu disconnect
+clabcli disconnect
 ```
 
 ## 环境说明
