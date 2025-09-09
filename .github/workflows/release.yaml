@@ -1,12 +1,12 @@
-name: Build and Upload Docs Artifact
+name: Release Docs
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    tags:
+      - 'v*'
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,10 +30,9 @@ jobs:
           cwd: ${{ github.workspace }}/.vitepress/
           files: |
             ./dist
-          outPath: ${{ github.workspace }}/.vitepress/clab-docs.tar.gz
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+          outPath: ${{ github.workspace }}/.vitepress/clab-docs-${{ github.ref_name }}.tar.gz
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: clab-docs
-          path: ${{ github.workspace }}/.vitepress/clab-docs.tar.gz
-          retention-days: 30
+          files: ${{ github.workspace }}/.vitepress/clab-docs-${{ github.ref_name }}.tar.gz
+          generate_release_notes: true
