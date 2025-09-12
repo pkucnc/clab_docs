@@ -14,10 +14,7 @@ ICS 课程使用 CLab 作为实验环境。理论上所有 Lab 都需要在使�
 
 - 类型：P4（4C4G），配置 40G 以上 SSD 储存
 - 启动源 ：镜像，选择 Ubuntu 分类中的“Ubuntu for ICS 2025”
-- 网络：共享网络中，同时勾选 pku-new 与 ics2025a。2025 年秋学期的网络将在拿到选课名单之后为大家开通
-- 如已经创建账号，但创建完成的第二天仍然看不到 ics2025a 网络，请发邮件至`linuxclub@pku.edu.cn`
-
-注意，创建网络时应该先先后勾选 pku-new 网络和 ics2025a，顺序不能颠倒。第一个勾选的网络会作为主网络，如果 ics2025a 作为主网络，将不能从校园网连接。
+- 网络：共享网络中，勾选 pku-new 
 
 # 安全须知
 
@@ -50,7 +47,7 @@ clabcli disconnect
 已预装 lab 所需环境。由于环境可能会热更新，大家可以经常运行如下命令，保持环境最新：
 
 ```plain
-sudo apt update &&sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
-这是一个“Baseline”环境，从此出发，大家可以自由配置，也可以不使用 ICS 镜像，从任意通用镜像新建云主机，自行配置环境，不过需要注意连接到课程网络`ics2025a`。
+这是一个“Baseline”环境，从此出发，大家可以自由配置，也可以不使用 ICS 镜像，从任意通用镜像新建云主机，自行配置环境。
