@@ -53,7 +53,7 @@ ssh-keygen -t ed25519
 
 ### 登录主机
 
-通过主机的 IP 地址登录主机，进行后续操作，用户名是`almalinux`。例如：
+通过主机的 IP 地址登录主机，进行后续操作，用户名是`almalinux`，连接“10.129.X.X”开头的 IP 地址。例如：
 
 ```plain
 ssh almalinux@10.129.242.10
