@@ -35,14 +35,14 @@ ssh-keygen -t ed25519
 ![](/assets/courses/eda/create_vm.jpg)
 
 1. 选择规格：使用`elite_computing`分类，类型为`e3`
-2. 选择操作系统：使用`其他`分类，选择`Almalinux 8.10 with GUI`，版本随意
+2. 选择操作系统：使用`Centos`分类，选择`Almalinux 8.10 with GUI`，版本随意
 3. 选择硬盘：点击“是-创建云硬盘”，使用`SSD`类型，大小为`100GB`
 
 #### 第二页
 
 ![](/assets/courses/eda/config_net.png)
 
-选择网络：首先勾选”共享网络“中的`pku-new`，然后勾选”当前项目网络“中的课程 EDA 课程网络，名称一般为`eda-`开头。顺序不能颠倒，必须先勾选`pku-new`，再勾选课程网络。
+选择网络：首先选择“共享网络”，接着勾选`pku-new`，然后勾选`eda-net`。顺序不能颠倒，必须先勾选`pku-new`，再勾选课程网络。
 
 #### 第三页
 
